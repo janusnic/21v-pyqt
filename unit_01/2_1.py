@@ -17,11 +17,15 @@ class Example(QtGui.QDialog):
         self.setGeometry(600, 300, 500, 150)
         self.setWindowTitle(u"Первое GUI-приложение")
 
-app = QtGui.QApplication(sys.argv)
+def main():
 
-ex = Example()
+    app = QtGui.QApplication(sys.argv)
 
-ex.show()
+    ex = Example()
 
-sys.exit(app.exec_())
+    ex.show()
 
+    sys.exit(app.exec_())
+
+if __name__ == '__main__':
+    main()
