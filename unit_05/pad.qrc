@@ -1,0 +1,34 @@
+<RCC>
+  <qresource prefix="/">
+    <file>icons/underline.png</file>
+    <file>icons/highlight.png</file>
+    <file>icons/align-center.png</file>
+    <file>icons/align-justify.png</file>
+    <file>icons/align-left.png</file>
+    <file>icons/align-right.png</file>
+    <file>icons/bold.png</file>
+    <file>icons/bullet.png</file>
+    <file>icons/dedent.png</file>
+    <file>icons/font-color.png</file>
+    <file>icons/font-size.png</file>
+    <file>icons/font.png</file>
+    <file>icons/indent.png</file>
+    <file>icons/italic.png</file>
+    <file>icons/number.png</file>
+    <file>icons/strike.png</file>
+    <file>icons/subscript.png</file>
+    <file>icons/superscript.png</file>
+    <file>icons/copy.png</file>
+    <file>icons/cut.png</file>
+    <file>icons/redo.png</file>
+    <file>icons/undo.png</file>
+    <file>icons/paste.png</file>
+    <file>icons/preview.png</file>
+    <file>icons/print.png</file>
+    <file>icons/new.png</file>
+    <file>icons/save.png</file>
+    <file>icons/open.png</file>
+    <file>icons/open2.png</file>
+    <file>icons/open3.png</file>
+  </qresource>
+</RCC>

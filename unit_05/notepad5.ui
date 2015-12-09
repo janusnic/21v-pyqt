@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1022</width>
+    <height>544</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Блокнот</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1001</width>
+      <height>441</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1022</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="newAction"/>
+    <addaction name="openAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="separator"/>
+    <addaction name="printAction"/>
+    <addaction name="previewAction"/>
+    <addaction name="closeAction"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="cutAction"/>
+    <addaction name="copyAction"/>
+    <addaction name="pasteAction"/>
+    <addaction name="undoAction"/>
+    <addaction name="redoAction"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="toolbarAction"/>
+    <addaction name="formatbarAction"/>
+    <addaction name="fontbarAction"/>
+    <addaction name="statusbarAction"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFormat">
+    <property name="title">
+     <string>Format</string>
+    </property>
+    <addaction name="bulletAction"/>
+    <addaction name="numberedAction"/>
+    <addaction name="separator"/>
+    <addaction name="fontColor"/>
+    <addaction name="backColor"/>
+    <addaction name="separator"/>
+    <addaction name="boldAction"/>
+    <addaction name="italicAction"/>
+    <addaction name="underlAction"/>
+    <addaction name="strikeAction"/>
+    <addaction name="superAction"/>
+    <addaction name="subAction"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuFormat"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolbar">
+   <property name="font">
+    <font>
+     <family>Noto Sans [unknown]</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="windowTitle">
+    <string>Options</string>
+   </property>
+   <property name="new" stdset="0">
+    <iconset>
+     <normaloff>icons/new.png</normaloff>icons/new.png</iconset>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="separator"/>
+   <addaction name="newAction"/>
+   <addaction name="openAction"/>
+   <addaction name="saveAction"/>
+   <addaction name="separator"/>
+   <addaction name="printAction"/>
+   <addaction name="previewAction"/>
+   <addaction name="separator"/>
+   <addaction name="cutAction"/>
+   <addaction name="copyAction"/>
+   <addaction name="pasteAction"/>
+   <addaction name="undoAction"/>
+   <addaction name="redoAction"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QToolBar" name="formatbar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="boldAction"/>
+   <addaction name="italicAction"/>
+   <addaction name="underlAction"/>
+   <addaction name="strikeAction"/>
+   <addaction name="superAction"/>
+   <addaction name="subAction"/>
+   <addaction name="numberedAction"/>
+   <addaction name="bulletAction"/>
+   <addaction name="fontColor"/>
+   <addaction name="backColor"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QToolBar" name="fontbar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="closeAction">
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="toolTip">
+    <string>Close Notepad</string>
+   </property>
+   <property name="statusTip">
+    <string>Close app</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="newAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/new.png</normaloff>:/icons/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>Create New File</string>
+   </property>
+   <property name="statusTip">
+    <string>Create New File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="openAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/open.png</normaloff>:/icons/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a File</string>
+   </property>
+   <property name="statusTip">
+    <string>Open a File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/save.png</normaloff>:/icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save a File</string>
+   </property>
+   <property name="statusTip">
+    <string>Save a File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="printAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/print.png</normaloff>:/icons/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print document</string>
+   </property>
+   <property name="statusTip">
+    <string>Print document</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="previewAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/save.png</normaloff>:/icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Page View</string>
+   </property>
+   <property name="statusTip">
+    <string>Preview page before printing</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
+   </property>
+  </action>
+  <action name="cutAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/cut.png</normaloff>:/icons/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut to clipboard</string>
+   </property>
+   <property name="statusTip">
+    <string>Delete and copy text to clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="copyAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/copy.png</normaloff>:/icons/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy text to clipboard</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy text to clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="pasteAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/paste.png</normaloff>:/icons/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste from clipboard</string>
+   </property>
+   <property name="statusTip">
+    <string>Paste text from clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="undoAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/undo.png</normaloff>:/icons/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo last action</string>
+   </property>
+   <property name="statusTip">
+    <string>Undo last action</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="redoAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/redo.png</normaloff>:/icons/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo last undone thing</string>
+   </property>
+   <property name="statusTip">
+    <string>Redo last undone thing</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="bulletAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/bullet.png</normaloff>:/icons/bullet.png</iconset>
+   </property>
+   <property name="text">
+    <string>Insert bullet List</string>
+   </property>
+   <property name="statusTip">
+    <string>Insert bullet list</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+B</string>
+   </property>
+  </action>
+  <action name="numberedAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/number.png</normaloff>:/icons/number.png</iconset>
+   </property>
+   <property name="text">
+    <string>Insert numbered List</string>
+   </property>
+   <property name="statusTip">
+    <string>Insert numbered list</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+L</string>
+   </property>
+  </action>
+  <action name="fontColor">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/font-color.png</normaloff>:/icons/font-color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Change font color</string>
+   </property>
+  </action>
+  <action name="backColor">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/highlight.png</normaloff>:/icons/highlight.png</iconset>
+   </property>
+   <property name="text">
+    <string>Change background color</string>
+   </property>
+  </action>
+  <action name="boldAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/bold.png</normaloff>:/icons/bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="italicAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/italic.png</normaloff>:/icons/italic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Italic</string>
+   </property>
+  </action>
+  <action name="underlAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/underline.png</normaloff>:/icons/underline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Underline</string>
+   </property>
+  </action>
+  <action name="strikeAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/strike.png</normaloff>:/icons/strike.png</iconset>
+   </property>
+   <property name="text">
+    <string>Strike-out</string>
+   </property>
+  </action>
+  <action name="superAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/superscript.png</normaloff>:/icons/superscript.png</iconset>
+   </property>
+   <property name="text">
+    <string>Superscript</string>
+   </property>
+  </action>
+  <action name="subAction">
+   <property name="icon">
+    <iconset resource="pad.qrc">
+     <normaloff>:/icons/subscript.png</normaloff>:/icons/subscript.png</iconset>
+   </property>
+   <property name="text">
+    <string>Subscript</string>
+   </property>
+  </action>
+  <action name="toolbarAction">
+   <property name="text">
+    <string>Toggle Toolbar</string>
+   </property>
+  </action>
+  <action name="formatbarAction">
+   <property name="text">
+    <string>Toggle Formatbar</string>
+   </property>
+  </action>
+  <action name="fontbarAction">
+   <property name="text">
+    <string>Toggle Fontsbar</string>
+   </property>
+  </action>
+  <action name="statusbarAction">
+   <property name="text">
+    <string>Toggle Statusbar</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="pad.qrc"/>
+ </resources>
+ <connections/>
+</ui>
