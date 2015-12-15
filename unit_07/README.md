@@ -321,12 +321,11 @@ SQLite версия команды ALTER TABLE позволяет пользов
 После выполнения ADD COLUMN, база данных не будет читаться SQLite версии 3.1.3 и ниже, до применения команды VACUUM.
 
 Добавим к нашей таблице Product column updatedon. 
-
-sqlite> alter table Product add column updatedon date;
 ```
+sqlite> alter table Product add column updatedon date;
 
 sqlite> .schema Product
-```
+
 .schema Product
 CREATE TABLE Product (
              ProductID INTEGER PRIMARY KEY AUTOINCREMENT,
